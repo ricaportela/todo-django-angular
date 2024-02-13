@@ -1,0 +1,21 @@
+<!-- Atualização do código no arquivo src/app/app.component.html -->
+
+<div class="content">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Defina as colunas da tabela aqui -->
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef> Título </th>
+      <td mat-cell *matCellDef="let todo"> {{ todo.title }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="completed">
+      <th mat-header-cell *matHeaderCellDef> Concluído </th>
+      <td mat-cell *matCellDef="let todo"> {{ todo.completed ? 'Sim' : 'Não' }} </td>
+    </ng-container>
+    <!-- Adicione mais colunas conforme necessário -->
+
+    <!-- Configurar as colunas na tabela -->
+    <tr mat-header-row *matHeaderRowDef="['title', 'completed']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['title', 'completed'];"></tr>
+  </table>
+</div>
