@@ -3,7 +3,7 @@ import { TodoServiceService } from './todo-service/todo-service.service';
 import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-main',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
